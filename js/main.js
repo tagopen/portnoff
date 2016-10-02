@@ -46,3 +46,4 @@ $('.navbar-fixed-top').affix({
   slidesToShow: 1,
   adaptiveHeight: true
 });*/
+/*
