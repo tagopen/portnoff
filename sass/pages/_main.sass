@@ -25,13 +25,15 @@
   &__input
     background-color: transparent
     font: 400 16px/18px $roboto
-    padding: 15px 0 15px 15px
+    padding: 15px 0 15px 20px
     color: #fff
     text-align: left
     +br(32px)
-    border: 2px solid #fff
+    border: 2px solid rgba(255,255,255,0.5)
     +placeholder
       color: #fff
+    &:hover
+      border-color: rgba(255,255,255,1)  
     &:focus
       border-color: rgba(253, 173, 0, 1)
 .btn
@@ -40,11 +42,18 @@
     text-align: center
     font: 700 16px/20px $roboto
     padding: 15px 0    
-    color: rgba(49, 52, 59, 0.9)
-    background-color: rgba(253, 173, 0, 1)
-    +bs(0px 10px 20px rgba(223, 114, 21, 0.2))
     +br(32px)
     border: 0  
+.g
+  &-heading
+    font: 700 40px/40px $roboto
+    margin-top: 0
+    margin-bottom: 15px
+    text-align: center
+  &-subheading
+    font: 400 16px/18px $roboto
+    margin: 0    
+    text-align: center
 +comment("home page style")
 html
   overflow-x: hidden
@@ -58,9 +67,22 @@ a:focus
   text-decoration: none
   outline: none  
 +comment("header style") 
+.header
+  position: relative
+.video
+  position: absolute
+  margin-top: -100px
+  left: 0
+  top: 0
+  width: 100%  
+  &__bg
+    height: 100%
+    width: 100%
+    background-color: rgba(255,255,255,0.5) 
 .navbar
-  background-color: green
   border: 0
+  background-color: transparent
+  margin-bottom: 0
   &__brand
     height: auto
     padding: 22px 0 15px
@@ -72,9 +94,16 @@ a:focus
     color: inherit
   &__menu
     color: #fff  
+    +transition(all .3s ease-out)
+    &:hover
+      transform: translate(0,-10px)
+      +transition(all .3s ease-out)
   &__phone
     padding-top: 35px 
     color: #fff 
+.affix
+  background-color: rgba(50,50,50,0.9)
+  +transition(all 0.3s ease-out)        
 .brand
   &__descr
     font-size: 8px
@@ -88,14 +117,14 @@ a:focus
     color: inherit
 +comment("content style") 
 .content
-  background-color: green
-  margin-top: 88px
-  padding: 90px 0 150px
+  margin-top: 100px
+  padding: 90px 0 100px
   text-align: center
   &__heading
     font: 700 64px/80px $roboto
     color: #fff
-    margin-bottom: 65px
+    margin-bottom: 45px
+    margin-top: 0
   &__form
     margin-bottom: 70px  
   &__box
@@ -111,26 +140,116 @@ a:focus
     color: #fff
     font: 400 16px/18px $roboto 
     text-align: center
+  &__btn  
+    color: rgba(49, 52, 59, 0.9)
+    background-color: rgba(253, 173, 0, 1)
+    +bs(0px 10px 20px rgba(223, 114, 21, 0.2))
+.form__heading
+  color: #fff
+  font: 300 40px/40px $roboto
+  margin-bottom: 30px   
 .contact
-  padding: 25px 0
+  padding: 15px 0 25px
+  position: relative
+  z-index: 20
+  height: 150px
   background-color: rgba(255, 197, 0, 0.8)
   &__box
     text-align: center  
+    +transition(all .3s ease-out)
     .ic
-      margin-bottom: 20px 
-    &:hover
-      transition: all 1s ease-out  
+      margin-bottom: 10px 
+      +transition(all .3s ease-out)  
+    &:hover 
+      .ic
+        transform: translate(0,-10px)
+        +transition(all .3s ease-out) 
       .contact__name
-        opacity: 1
         display: block
+        opacity: 1
+        +transition(all 1s ease-out) 
   &__info
     margin-bottom: 0  
     font: 400 16px/16px $roboto
     color: #333
     text-align: center
   &__name
-    opacity: 0
-    display: none  
+    display: none
+    opacity: 0 
     font: 400 16px/16px $roboto
     color: #333
     text-align: center
+    margin-bottom: 10px
++comment("price style") 
+.price
+  padding: 55px 0 100px
+  &__heading
+    color: #31343B
+    text-transform: uppercase
+  &__subheading
+    color: #31343B 
+    margin-bottom: 25px 
+  &__box
+    text-align: center  
+  &__img
+    display: inline-block
+    margin: 50px 0 25px
+    position: relative
+    +transition(all .3s ease-out)
+    &:hover
+      transform: translate(0,-10px)
+      +transition(all .3s ease-out)
+      .price__img--hover
+        +transition(all .3s ease-out)
+        opacity: 1
+        &text
+          transform: translate(0,-10px)
+          +transition(all .5s ease-out)
+      ~.price__subscribe .price__line
+        width: 100px    
+        +transition(all .5s ease-out) 
+    &--hover
+      display: inline-block
+      height: 100%
+      width: 100%
+      left: 0
+      top: 0
+      position: absolute
+      background-color: rgba(0,0,0,0.5)
+      opacity: 0
+      +br(50%)
+      padding: 0 40px
+      line-height: 240px
+      opacity: 0
+      +transition(all .3s ease-out)
+      &text
+        color: #fff
+        vertical-align: middle
+        font: 400 16px/normal $roboto
+        display: inline-block      
+  &__service
+    margin-bottom: 10px
+    font: 300 20px/22px $roboto
+    color: #31343B 
+  &__cost
+    font: 700 20px/22px $roboto
+    margin-bottom: 10px
+  &__line
+    margin: 0 auto
+    background-color: rgba(255, 197, 0, 1)  
+    height: 3px
+    width: 0
+    +transition(all .3s ease-out)
+  &__btn
+    margin-top: 50px
+    border: 2px solid #31343B
+    color: #31343B
+    display: inline-block
+    +transition(all .3s ease-out)
+    &:hover,
+    &:focus,
+    &:active
+      color: #fff
+      background-color: #31343B
+      transform: translate(0,-15px)
+      +transition(all .3s ease-out)

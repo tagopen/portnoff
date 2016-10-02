@@ -36,14 +36,15 @@ $('.navbar-fixed-top').affix({
   }
 })
 
-// Equal height
-/*$('.equial').equialHeight();*/
-
-/*$('.slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
-});*/
-/*
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+       $('.navbar').addClass('navbar-background');
+   } else {
+      // upscroll code
+      $('.navbar').addClass('navbar-background');
+   }
+   lastScrollTop = st;
+});
