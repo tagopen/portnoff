@@ -52,6 +52,9 @@
     <!-- Font-Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.css">
 
+    <!-- Google-Font Roboto CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic-ext" rel="stylesheet"> 
+
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -63,8 +66,42 @@
     <![endif]-->
   </head>
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top affix-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="col-lg-2 navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand brand" href="#">
+            <img class="img-responsive brand__img" src="img/logo/logo.svg" width="131" height=30" alt="Портнофф"> 
+            <span class="brand__descr">Таганское Швейное Объединение</span>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="col-lg-8 nav navbar-nav">
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Выгоды</a></li>
+            <li><a href="#">Работы</a></li>
+            <li><a href="#">Схема работы</a></li>
+            <li><a href="#">Производство</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="col-lg-2 nav navbar-nav">
+            <li class="text-right phone">
+              <a href="tel:+74952080505" class="phone__link">+7 495 208 05 05</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+    
     <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap JavaScript -->
@@ -75,10 +112,6 @@
 
     <!-- Equial Heights JavaScript -->
     <script src="js/jQuery.equalHeights.js"></script>
-
-    <!-- Navbar-fixed-top JavaScript -->
-    <!--<script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.min.js"></script>-->
 
     <!-- Validation Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>

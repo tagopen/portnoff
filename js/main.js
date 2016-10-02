@@ -29,6 +29,13 @@ $(function() {
     });
 });
 
+// Offset for Main Navigation
+$('.navbar-fixed-top').affix({
+  offset: {
+    top: 5
+  }
+})
+
 // Equal height
 /*$('.equial').equialHeight();*/
 
