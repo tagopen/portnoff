@@ -664,31 +664,22 @@
 }
 
 .form__input {
-  background-color: transparent;
-  font: 400 16px/18px "Roboto", sans-serif;
   padding: 15px 0 15px 20px;
-  color: #fff;
-  text-align: left;
   -webkit-border-radius: 32px;
   -moz-border-radius: 32px;
   -ms-border-radius: 32px;
   border-radius: 32px;
   border: 2px solid rgba(255, 255, 255, 0.5);
-}
-.form__input:-ms-input-placeholder {
+  background-color: transparent;
+  font: 400 16px/18px "Roboto", sans-serif;
   color: #fff;
-}
-.form__input:-moz-placeholder {
+  text-align: left;
   color: #fff;
-}
-.form__input::-moz-placeholder {
-  color: #fff;
-}
-.form__input::-webkit-input-placeholder {
-  color: #fff;
-}
-.form__input::placeholder {
-  color: #fff;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .form__input:hover {
   border-color: white;
@@ -772,9 +763,9 @@ a:focus {
 }
 
 .navbar {
+  margin-bottom: 0;
   border: 0;
   background-color: transparent;
-  margin-bottom: 0;
 }
 .navbar__brand {
   height: auto;
@@ -790,6 +781,7 @@ a:focus {
 }
 .navbar__menu {
   color: #fff;
+  opacity: 0.8;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -797,6 +789,7 @@ a:focus {
   transition: all 0.3s ease-out;
 }
 .navbar__menu:hover {
+  opacity: 1;
   transform: translate(0, -10px);
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -819,10 +812,11 @@ a:focus {
 }
 
 .brand__descr {
-  font-size: 8px;
+  display: block;
+  opacity: 0.5;
+  font: 400 8px/16px "Roboto", sans-serif;
   color: #fff;
   text-align: left;
-  line-height: 16px;
 }
 
 .phone__link {

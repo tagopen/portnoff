@@ -80,15 +80,16 @@
   text-align: left
 .form
   &__input
-    background-color: transparent
-    font: 400 16px/18px $roboto
     padding: 15px 0 15px 20px
-    color: #fff
-    text-align: left
     +br(32px)
     border: 2px solid rgba(255,255,255,0.5)
+    background-color: transparent
+    font: 400 16px/18px $roboto
+    color: #fff
+    text-align: left
     +placeholder
-      color: #fff
+    color: #fff
+    +transition(all .4s ease-out)
     &:hover
       border-color: rgba(255,255,255,1)  
     &:focus
@@ -147,9 +148,9 @@ a:focus
     width: 100%
     background-color: rgba(255,255,255,0.5) 
 .navbar
+  margin-bottom: 0
   border: 0
   background-color: transparent
-  margin-bottom: 0
   &__brand
     height: auto
     padding: 22px 0 15px
@@ -161,9 +162,11 @@ a:focus
     color: inherit
   &__menu
     color: #fff  
+    opacity: .8
     +transition(all .3s ease-out)
     &:hover
-      transform: translate(0,-10px)
+      opacity: 1
+      transform: translate(0, -10px)
       +transition(all .3s ease-out)
   &__phone
     padding-top: 35px 
@@ -173,10 +176,11 @@ a:focus
   +transition(all 0.3s ease-out)        
 .brand
   &__descr
-    font-size: 8px
+    display: block
+    opacity: .5
+    font: 400 8px/16px $roboto
     color: #fff
     text-align: left
-    line-height: 16px
 .phone
   &__link
     font: 400 18px/20px $roboto
