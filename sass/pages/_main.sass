@@ -17,7 +17,61 @@
     +svgb(#{$ic}, 72, 72)
 @each $ic in contact3
   .ic-#{$ic}
-    +svgb(#{$ic}, 72, 72)          
+    +svgb(#{$ic}, 72, 72)   
+@each $ic in adv1
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)   
+@each $ic in adv2
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)  
+@each $ic in adv3
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)      
+@each $ic in adv4
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)
+@each $ic in adv5
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in adv6
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in adv7
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in adv8
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in adv9
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)      
+@each $ic in advh1
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)   
+@each $ic in advh2
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)  
+@each $ic in advh3
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)      
+@each $ic in advh4
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)
+@each $ic in advh5
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in advh6
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in advh7
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in advh8
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in advh9
+  .ic-#{$ic}
+    +svgb(#{$ic}, 72, 72)                 
 .text-danger
   color: #e74c3c
   text-align: left
@@ -253,3 +307,80 @@ a:focus
       background-color: #31343B
       transform: translate(0,-15px)
       +transition(all .3s ease-out)
++comment("advatage style")       
+.advantage
+  padding: 65px 0
+  background: rgba(58, 63, 71, 1) url(../img/advbg.png) repeat
+  &__heading
+    color: #fff
+    text-transform: uppercase
+  &__subheading
+    margin-bottom: 55px
+    color: #fff
+  &__box
+    text-align: center
+    padding: 40px 50px 40px
+    background-color: rgb(50,50,60)
+    margin-bottom: 20px
+    +transition(all .3s ease-out)
+    &:hover
+      background-color: rgba(255, 197, 0, 1)
+      +transition(all .3s ease-out)
+      .ic,
+      .advantage__text
+        visibility: hidden
+        opacity: 0
+        +transition(all .3s ease-out)
+      .advantage__ic--hover
+        display: inline-block
+        opacity: 1
+        visibility: visible
+        transform: translate(0,-20px)
+        +transition(all .3s ease-out)
+      .advantage__text--hover
+        opacity: 1
+        visibility: visible
+        transform: translate(0,20px)
+        +transition(all .3s ease-out)
+  &__ic
+    opacity: 1
+    visibility: visible
+    &--hover
+      opacity: 0 
+      visibility: hidden
+    &ons
+      position: relative  
+      height: 72px
+      .ic
+        position: absolute
+        left: 50%    
+        margin-left: -36px
+  &__text
+    color: #fff
+    font: 400 20px/24px $roboto
+    opacity: 1
+    visibility: visible
+    margin-bottom: -60px
+    position: relative
+    top: 50px
+    &--hover
+      font: 400 16px/20px $roboto
+      opacity: 0
+      visibility: hidden
+      margin: 0
+      position: static
+  &__btn
+    &--box
+      text-align: center
+      padding: 40px
+      +bs(0 0 0 2px rgba(255, 197, 0, 1) inset) 
+      font: 400 24px/28px $roboto  
+      color: rgba(255, 197, 0, 1)
+      line-height: 220px
+      &:hover
+        color: #fff
+        cursor: pointer
+    &--text
+      display: inline-block
+      vertical-align: middle
+      line-height: normal    

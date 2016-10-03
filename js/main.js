@@ -1,3 +1,24 @@
+// Equal Height function
+$.fn.equialHeight = function() {
+  var $tallestcolumn = 0;
+  var $currentHeight = 0;
+  $.each($(this), function (index, value) {
+    $currentHeight = $(this).height();
+    if($currentHeight > $tallestcolumn)
+    {
+      $tallestcolumn = $currentHeight;
+    }
+  });
+  $(this).height($tallestcolumn);
+  return $(this);
+} 
+// EqiualHeight initialize
+$(window).on('resize', function(){
+  if( $( window ).width() >= 768 ) {
+    $('.advantage__box').equialHeight();
+  }
+
+}).trigger('resize');
 // Old browser notification
 $(function() { 
   $.reject({
@@ -36,15 +57,11 @@ $('.navbar-fixed-top').affix({
   }
 })
 
-var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       // downscroll code
-       $('.navbar').addClass('navbar-background');
-   } else {
-      // upscroll code
-      $('.navbar').addClass('navbar-background');
-   }
-   lastScrollTop = st;
+$(document).ready( function () {
+  $('.advantage--hidden').hide();
+  $(document).on("click", ".advantage__btn", (function(e) {
+    e.preventDefault();
+    $('.advantage--hidden').show();
+    $('.advantage__btn').hide();
+  }));
 });
