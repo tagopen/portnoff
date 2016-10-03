@@ -460,10 +460,12 @@ a:focus
     padding: 40px 10px 35px 100px 
     +bs(0px 4px 8px rgba(0, 0, 0, 0.0980392156862745))
     position: relative
+    +transition(all .15s ease-out)
     &:hover
       .scheme
         &__number
           color: #FDAD00
+          +transition(all .15s ease-out)
   &__name
     font: 300 32px/36px $roboto
     color: #31343B
