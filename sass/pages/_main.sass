@@ -494,6 +494,10 @@ a:focus
         &__number
           color: #FDAD00
           +transition(all .15s ease-out)
+        &__arrow
+          visibility: visible
+          opacity: 1  
+          +transition(all .15s ease-out)
   &__name
     font: 300 32px/36px $roboto
     color: #31343B
@@ -510,6 +514,19 @@ a:focus
     top: 10px    
     font: 300 80px/80px $roboto
     color: rgba(49, 52, 59, 0.5)
+  &__arrow
+    display: inline-block
+    position: absolute  
+    z-index: 15
+    visibility: hidden
+    opacity: 0
+    +transition(all .15s ease-out)
+    &--1
+      right: -80px
+      bottom: 45px
+    &--2
+      left: -55px
+      bottom: -55px
 +comment("advice style") 
 .advice
   padding: 90px 0
@@ -578,10 +595,11 @@ a:focus
       +transition(all .3s ease-out)
       &:hover
         cursor: pointer
-        .slider__item--hover
-          visibility: visible
-          opacity: 1
-          +transition(all .3s ease-out)
+.slick-current
+  .slider__item--hover
+    visibility: visible
+    opacity: 1
+    +transition(all .3s ease-out)
 +comment("map style") 
 .map
   position: relative

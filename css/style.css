@@ -1347,6 +1347,15 @@ a:focus {
   -ms-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
+.scheme__box:hover .scheme__arrow {
+  visibility: visible;
+  opacity: 1;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
 .scheme__name {
   font: 300 32px/36px "Roboto", sans-serif;
   color: #31343B;
@@ -1366,6 +1375,26 @@ a:focus {
   top: 10px;
   font: 300 80px/80px "Roboto", sans-serif;
   color: rgba(49, 52, 59, 0.5);
+}
+.scheme__arrow {
+  display: inline-block;
+  position: absolute;
+  z-index: 15;
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.scheme__arrow--1 {
+  right: -80px;
+  bottom: 45px;
+}
+.scheme__arrow--2 {
+  left: -55px;
+  bottom: -55px;
 }
 
 /* ---------------------------------------- */
@@ -1465,7 +1494,8 @@ a:focus {
 .slider__item--box:hover {
   cursor: pointer;
 }
-.slider__item--box:hover .slider__item--hover {
+
+.slick-current .slider__item--hover {
   visibility: visible;
   opacity: 1;
   -moz-transition: all 0.3s ease-out;
