@@ -1248,6 +1248,50 @@ a:focus {
   margin-bottom: 50px;
 }
 
+.mosaicflow__item {
+  height: 220px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.mosaicflow__item--doubleheight {
+  height: 460px;
+}
+.mosaicflow__item--1 {
+  background-image: url("../img/work1.jpg");
+}
+.mosaicflow__item--2 {
+  background-image: url("../img/work2.jpg");
+}
+.mosaicflow__item--3 {
+  background-image: url("../img/work3.jpg");
+}
+.mosaicflow__item--4 {
+  background-image: url("../img/work4.jpg");
+}
+.mosaicflow__item--5 {
+  background-image: url("../img/work5.jpg");
+}
+.mosaicflow__item--6 {
+  background-image: url("../img/work6.jpg");
+}
+.mosaicflow__item--7 {
+  background-image: url("../img/work7.jpg");
+}
+.mosaicflow__item--8 {
+  background-image: url("../img/work8.jpg");
+}
+.mosaicflow__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .brick {
   width: 25%;
 }

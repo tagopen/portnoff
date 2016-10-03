@@ -100,18 +100,7 @@ $('.toTop ').click(function(){
   return false;
 });
 
- /*FANCYBOX SCRIPT*/
-  $(document).ready(function() {
-      $(".fancybox").fancybox({
-          openEffect  : 'none',
-          closeEffect : 'none'
-      });
-  });
-  
- /*MASONRY SCRIPT*/
-var $container = $('.work__box');
-// Инициализация
-$container.masonry({
-  columnWidth: 200,
-  itemSelector: '.brick'
-});
+ // fancybox 2
+$(document).ready(function() { 
+  $("a.fancyimage").fancybox(); 
+}); 
