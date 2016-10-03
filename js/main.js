@@ -83,3 +83,35 @@ $('.make__slider--small').slick({
   dots: false,
   focusOnSelect: true
 });
+
+// Scheme hover
+$(document).ready( function () {
+  $(".scheme__box").mouseover(function () {
+      $('.scheme__box').css({'background-color' : '#f4f3f1'});
+      $(this).css({'backgroundColor' : '#fff'});
+  });
+  $(".scheme__box").mouseout(function () {
+      $('.scheme__box').css({'background-color' : '#fff'});
+  });
+});
+ /*SCROLL SCRIPT*/
+$('.toTop ').click(function(){
+  $("html, body").animate({ scrollTop: 0 }, 1500);
+  return false;
+});
+
+ /*FANCYBOX SCRIPT*/
+  $(document).ready(function() {
+      $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+      });
+  });
+  
+ /*MASONRY SCRIPT*/
+var $container = $('.work__box');
+// Инициализация
+$container.masonry({
+  columnWidth: 200,
+  itemSelector: '.brick'
+});

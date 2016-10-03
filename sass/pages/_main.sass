@@ -74,7 +74,7 @@
     +svgb(#{$ic}, 72, 72) 
 @each $ic in eye2
   .ic-#{$ic}
-    +svgb(#{$ic}, 36, 26)                           
+    +svgb(#{$ic}, 36, 26)    
 .text-danger
   color: #e74c3c
   text-align: left
@@ -88,7 +88,7 @@
     color: #fff
     text-align: left
     +placeholder
-    color: #fff
+      color: #fff
     +transition(all .4s ease-out)
     &:hover
       border-color: rgba(255,255,255,1)  
@@ -137,7 +137,6 @@ a:focus
     top: 0
     left: 0
     background-color: rgba(49, 52, 59, 0.698)
-  &__video
 .video
   position: absolute
   height: 100%
@@ -217,6 +216,10 @@ a:focus
     color: rgba(49, 52, 59, 0.9)
     background-color: rgba(253, 173, 0, 1)
     +bs(0px 10px 20px rgba(223, 114, 21, 0.2))
+    +transition(all .3s ease-out)
+    &:hover
+      transform: translate(0, -15px)
+      +transition(all .3s ease-out)
 .work
   &__item
     display: inline-block
@@ -420,7 +423,27 @@ a:focus
     &--text
       display: inline-block
       vertical-align: middle
-      line-height: normal   
+      line-height: normal 
++comment("work style")      
+.work
+  padding: 50px 0  
+  &__heading
+    color: #31343B
+    text-transform: uppercase
+  &__subheading
+    color: #31343B 
+    margin-bottom: 50px 
+.brick
+  width: 25%
+  &-2
+    width: 50%  
+.fancybox
+  &-wrap    
+    width: 100% !important
+    max-width: 1200px !important
+  &-inner 
+    width: 100% !important
+    height: auto !important         
 +comment("scheme style") 
 .scheme
   padding: 50px 0
@@ -529,3 +552,55 @@ a:focus
           visibility: visible
           opacity: 1
           +transition(all .3s ease-out)
++comment("map style") 
+.map
+  position: relative
+  background-color: grey
+  &__maper
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+  &__form
+    margin: 140px 0
+    background-color: #fff
+    padding: 50px 35px 40px
+  &__heading
+    font: 300 32px/36px $roboto
+    color: #31343B
+    margin-bottom: 50px
+  &__group
+    margin-bottom: 25px  
+  &__input
+    border: 2px solid rgba(200, 200, 200, 0.8)
+    color: #000
+    +placeholder
+      color: #000
+    &:hover
+      border-color: rgba(49, 52, 59, 0.97)
+  &__btn
+    margin-top: 20px    
++comment("footer style") 
+.footer
+  padding: 30px 0
+  background-color: rgba(49, 52, 59, 1)
+  &__text
+    font: 400 13px/24px $roboto
+    color: rgb(130,130,130)
+    &--span
+      color: #fff
+.scroll    
+  display: inline-block
+  border: 2px solid rgba(200, 200, 200, 0.8)  
+  +br(50%)
+  height: 50px
+  width: 50px
+  line-height: 45px
+  text-align: center
+  color: rgba(200, 200, 200, 0.8)
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited
+    color: rgba(200, 200, 200, 0.8)

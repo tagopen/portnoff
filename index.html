@@ -55,6 +55,9 @@
   <!-- Google-Font Roboto CSS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic-ext" rel="stylesheet"> 
 
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+
   <!-- Custom CSS  -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -388,6 +391,63 @@
       </div>
     </div>
   </section>
+  <!--     WORK   SECTION   BEGIN    -->
+  <div class="work">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="g-heading work__heading">Наши работы</h2>
+          <h3 class="g-subheading work__subheading">Более 5 000 изделий</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="work__box">
+            <div class="brick">
+              <a href="img/work1.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work1.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work2.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work2.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work3.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work3.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work4.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work4.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work5.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work5.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work6.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work6.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work7.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work7.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="brick">
+              <a href="img/work8.jpg" class="fancybox" rel="gallery" tabindex="0">
+                  <img src="img/work8.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--     SCHEME   SECTION   BEGIN    -->
   <section class="scheme">
     <div class="container">
@@ -409,8 +469,12 @@
               <span class="scheme__info--span">или </span>Звоните по телефону: +7 495 555 55 55</div>
               <div class="scheme__info">
               <span class="scheme__info--span">или </span>Приезжайте в офис: ул. Станиславского, 25/1</div>
-            <div class="scheme__number">01</div>
-          </div>
+              <div class="scheme__number">01</div>
+              <div class="scheme__arrow">
+                <img src="img/icons/arrow1.png" alt="">
+                <img src="img/icons/arrow2.png" alt="">
+              </div>
+            </div>
         </div>
         <div class="col-lg-6">
           <div class="scheme__box">
@@ -522,6 +586,59 @@
       </div>
     </div>
   </section>
+  <!--     MAP   SECTION   BEGIN    -->
+  <div class="map">
+  <iframe class="map__maper" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2245.7305585130016!2d37.666046!3d55.7458104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54aebc704bb61%3A0x611bfdb254d59c8d!2z0YPQuy4g0KHRgtCw0L3QuNGB0LvQsNCy0YHQutC-0LPQviwgMjXRgTEsINCc0L7RgdC60LLQsCwgMTA5MDA0!5e0!3m2!1sru!2sru!4v1475487640099" style="border:0" allowfullscreen></iframe>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-lg-offset-7">
+          <div class="map__form">
+          <div class="text-center map__heading">Получите бесплатную консультацию</div>
+            <form name="Форма3" class="contactForm clearfix" method="post" action="mail/mail.php">
+
+              <div class="form-group map__group col-lg-12">
+                <input class="form-control form__input map__input form__name" placeholder="Имя" required="" data-validation-required-message="Please enter your name." name="name" type="text">
+              </div>
+
+              <div class="form-group map__group col-lg-12">
+                <input class="form-control form__input map__input form__phone" placeholder="Эл.почта или телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" aria-invalid="false" type="tel">
+              </div>
+
+              <div class="text-center col-xs-lg-12">
+                <button type="submit" class="btn__call content__btn map__btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Оставить заявку</button>
+              </div>
+            </form>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--     FOOTER   SECTION   BEGIN    -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer__text">© 2016 Портнофф<br>Таганское Швейное Объединение</div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer__text">Телефон<div class="footer__text--span">8 495 208 05 05</div></div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer__text">WhatsApp
+            <div class="footer__text--span">8 962 222 22 22</div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer__text">Адрес<div class="footer__text--span">Станиславского, 25/1</div></div>
+        </div>
+        <div class="text-right col-lg-2">
+          <a href="" class="toTop scroll">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <!-- jQuery -->
@@ -542,6 +659,13 @@
 
   <!-- Slick-Slider JavaScript -->
   <script src="js/slick.js"></script>
+
+  <!-- Fancybox JavaScript -->
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/masonry.js"></script>
 
   <!-- Custom JavaScript -->
   <script src="js/main.js"></script>
