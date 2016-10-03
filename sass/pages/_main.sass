@@ -71,7 +71,10 @@
     +svgb(#{$ic}, 72, 72) 
 @each $ic in advh9
   .ic-#{$ic}
-    +svgb(#{$ic}, 72, 72)                 
+    +svgb(#{$ic}, 72, 72) 
+@each $ic in eye2
+  .ic-#{$ic}
+    +svgb(#{$ic}, 36, 26)                           
 .text-danger
   color: #e74c3c
   text-align: left
@@ -383,4 +386,112 @@ a:focus
     &--text
       display: inline-block
       vertical-align: middle
-      line-height: normal    
+      line-height: normal   
++comment("scheme style") 
+.scheme
+  padding: 50px 0
+  background-color: rgba(244, 243, 241, 1)
+  &__heading
+    color: #31343B
+    text-transform: uppercase
+  &__subheading
+    color: #31343B 
+    margin-bottom: 50px    
+  &__box
+    margin-bottom: 20px   
+    background-color: #fff
+    padding: 40px 10px 35px 100px 
+    +bs(0px 4px 8px rgba(0, 0, 0, 0.0980392156862745))
+    position: relative
+    &:hover
+      .scheme
+        &__number
+          color: #FDAD00
+  &__name
+    font: 300 32px/36px $roboto
+    color: #31343B
+    margin-bottom: 30px
+  &__info
+    font: 400 14px/24px $roboto
+    color: #333333
+    &--span
+      margin-right: 10px
+      color: rgba(49, 52, 59, 0.5)
+  &__number
+    position: absolute
+    left: 0
+    top: 10px    
+    font: 300 80px/80px $roboto
+    color: rgba(49, 52, 59, 0.5)
++comment("advice style") 
+.advice
+  padding: 90px 0
+  background: url(../img/advicebg.png) no-repeat
+  +cover
+  position: relative
+  &__bg
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    background-color: rgba(49, 52, 59, 0.7)
++comment("make style")
+.make
+  padding: 60px 0
+  &__heading
+    text-transform: uppercase
+    color: #31343B
+  &__subheading
+    margin-bottom: 50px 
+    color: #31343B
+  &__slider
+    margin-bottom: 20px  
+    .slick
+      &-prev
+        left: 0
+      &-next
+        right: 0  
+      &-prev,
+      &-next
+        top: 200px
+        z-index: 25
+        font-size: 0
+        line-height: 0
+        height: 60px
+        width: 60px
+        background-color: rgba(0,0,0,0.5)
+        &:hover
+          background-color: rgba(0,0,0,0.8)
+        &:before
+          content: ''
+          font-size: 0
+        .fa
+          font-size: 60px
+          color: #fff
+.slider
+  &__item
+    height: 480px  
+    &--hover
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background-color: rgba(255, 197, 0, 0.8)
+      visibility: hidden
+      opacity: 0
+      text-align: center
+      line-height: 90px
+    &--small
+      height: 90px  
+      padding: 0 10px
+    &--box
+      position: relative  
+      +transition(all .3s ease-out)
+      &:hover
+        cursor: pointer
+        .slider__item--hover
+          visibility: visible
+          opacity: 1
+          +transition(all .3s ease-out)

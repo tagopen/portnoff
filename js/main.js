@@ -16,6 +16,7 @@ $.fn.equialHeight = function() {
 $(window).on('resize', function(){
   if( $( window ).width() >= 768 ) {
     $('.advantage__box').equialHeight();
+    $('.scheme__box').equialHeight();
   }
 
 }).trigger('resize');
@@ -56,7 +57,7 @@ $('.navbar-fixed-top').affix({
     top: 5
   }
 })
-
+// Advatage button
 $(document).ready( function () {
   $('.advantage--hidden').hide();
   $(document).on("click", ".advantage__btn", (function(e) {
@@ -64,4 +65,21 @@ $(document).ready( function () {
     $('.advantage--hidden').show();
     $('.advantage__btn').hide();
   }));
+});
+// Slider
+$('.make__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: true,
+  asNavFor: '.make__slider--small',
+  prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous<i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+  nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next<i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+});
+$('.make__slider--small').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.make__slider',
+  dots: false,
+  focusOnSelect: true
 });
