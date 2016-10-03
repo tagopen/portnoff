@@ -810,7 +810,7 @@ a:focus {
 }
 
 .affix {
-  background-color: rgba(49, 52, 59, 0.9);
+  background-color: rgba(49, 52, 59, 0.97);
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -875,6 +875,31 @@ a:focus {
   -ms-box-shadow: 0px 10px 20px rgba(223, 114, 21, 0.2);
   -o-box-shadow: 0px 10px 20px rgba(223, 114, 21, 0.2);
   box-shadow: 0px 10px 20px rgba(223, 114, 21, 0.2);
+}
+
+.work__item {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.5;
+  cursor: pointer;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.work__item:hover {
+  opacity: 1;
+}
+.work__icon {
+  float: left;
+}
+.work__text {
+  margin: 0;
+  padding-top: 18px;
+  color: #fff;
+  font: 400 16px/18px "Roboto", sans-serif;
+  text-align: left;
 }
 
 .form__heading {

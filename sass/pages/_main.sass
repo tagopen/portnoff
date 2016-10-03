@@ -169,7 +169,7 @@ a:focus
     padding-top: 35px 
     color: #fff 
 .affix
-  background-color: rgba(49, 52, 59, 0.9)
+  background-color: rgba(49, 52, 59, 0.97)
   +transition(all 0.3s ease-out)        
 .brand
   &__descr
@@ -213,6 +213,24 @@ a:focus
     color: rgba(49, 52, 59, 0.9)
     background-color: rgba(253, 173, 0, 1)
     +bs(0px 10px 20px rgba(223, 114, 21, 0.2))
+.work
+  &__item
+    display: inline-block
+    vertical-align: middle
+    opacity: .5
+    cursor: pointer
+    +transition(all .4s ease-out)
+    &:hover
+      opacity: 1 
+  &__icon
+    float: left
+  &__text
+    margin: 0
+    padding-top: 18px
+    color: #fff
+    font: 400 16px/18px $roboto 
+    text-align: left
+
 .form__heading
   color: #fff
   font: 300 40px/40px $roboto
