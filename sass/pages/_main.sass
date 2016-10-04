@@ -674,7 +674,7 @@ a:focus
     border: 2px solid rgba(200, 200, 200, 0.8)
     color: #000
     +placeholder
-      color: rgba(49, 52, 59, 1)
+      color: rgba(49, 52, 59, 0.498039)
     &:hover
       border-color: rgba(49, 52, 59, 0.97)
   &__btn
@@ -704,7 +704,8 @@ a:focus
   &:active
     transform: translate(0, -15px)
     +transition(all .3s ease-out)
-    border-color: rgba(200,200,200,0.8)
+    border-color: rgba(130,130,130,.9)
     .fa
-      color: rgba(200,200,200,0.8)
-    
+      color: rgb(255,255,255)
+  &:focus
+    outline: none

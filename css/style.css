@@ -1662,19 +1662,19 @@ a:focus {
   color: #000;
 }
 .map__input:-ms-input-placeholder {
-  color: #31343b;
+  color: rgba(49, 52, 59, 0.49804);
 }
 .map__input:-moz-placeholder {
-  color: #31343b;
+  color: rgba(49, 52, 59, 0.49804);
 }
 .map__input::-moz-placeholder {
-  color: #31343b;
+  color: rgba(49, 52, 59, 0.49804);
 }
 .map__input::-webkit-input-placeholder {
-  color: #31343b;
+  color: rgba(49, 52, 59, 0.49804);
 }
 .map__input::placeholder {
-  color: #31343b;
+  color: rgba(49, 52, 59, 0.49804);
 }
 .map__input:hover {
   border-color: rgba(49, 52, 59, 0.97);
@@ -1726,8 +1726,11 @@ a:focus {
   -webkit-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  border-color: rgba(200, 200, 200, 0.8);
+  border-color: rgba(130, 130, 130, 0.9);
 }
 .scroll:hover .fa, .scroll:active .fa {
-  color: rgba(200, 200, 200, 0.8);
+  color: white;
+}
+.scroll:focus {
+  outline: none;
 }
