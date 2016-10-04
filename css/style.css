@@ -1351,11 +1351,11 @@ a:focus {
   opacity: 1;
 }
 .mosaicflow__link:hover .mosaicflow__img {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .mosaicflow__icon:before {
   position: absolute;
