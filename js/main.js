@@ -3,7 +3,7 @@ $(document).ready(function(){
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+1}, 1500);
+        $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+2}, 1500);
     });
 });
 // Equal Height function

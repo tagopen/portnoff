@@ -215,6 +215,7 @@ a:focus
   &__btn  
     color: rgba(49, 52, 59, 0.9)
     background-color: rgba(253, 173, 0, 1)
+    text-transform: uppercase
     +bs(0px 10px 20px rgba(223, 114, 21, 0.2))
     +transition(all .3s ease-out)
     &:hover
@@ -245,29 +246,35 @@ a:focus
   padding: 15px 0 25px
   position: relative
   z-index: 20
-  height: 150px
+  height: 155px
   background-color: rgba(255, 197, 0, 0.8)
   &__box
     text-align: center  
     +transition(all .3s ease-out)
     .ic
-      margin-bottom: 10px 
       +transition(all .3s ease-out)  
     &:hover 
       .ic
-        transform: translate(0,-10px)
+        transform: translate(0,-15px)
         +transition(all .3s ease-out) 
-      .contact__name
-        display: block
-        opacity: 1
-        +transition(all 1s ease-out) 
+      .contact
+        &__text  
+          transform: translate(0,5px)
+          +transition(all .3s ease-out) 
+        &__name
+          visibility: visible
+          opacity: 1
+          +transition(all .15s ease-out) 
+  &__text
+    transform: translate(0,-15px)   
+    +transition(all .3s ease-out) 
   &__info
     margin-bottom: 0  
     font: 400 16px/16px $roboto
     color: #333
     text-align: center
   &__name
-    display: none
+    visibility: hidden
     opacity: 0 
     font: 400 16px/16px $roboto
     color: #333
@@ -290,6 +297,7 @@ a:focus
     position: relative
     +transition(all .3s ease-out)
     &:hover
+      cursor: pointer
       transform: translate(0,-10px)
       +transition(all .3s ease-out)
       .price__img--hover
@@ -374,12 +382,12 @@ a:focus
         display: inline-block
         opacity: 1
         visibility: visible
-        transform: translate(0,-20px)
+        transform: translate(0,-10px)
         +transition(all .3s ease-out)
       .advantage__text--hover
         opacity: 1
         visibility: visible
-        transform: translate(0,20px)
+        top: 160px
         +transition(all .3s ease-out)
   &__ic
     opacity: 1
@@ -401,13 +409,16 @@ a:focus
     visibility: visible
     margin-bottom: -60px
     position: relative
-    top: 50px
+    top: 40px
     &--hover
       font: 400 16px/20px $roboto
       opacity: 0
       visibility: hidden
-      margin: 0
-      position: static
+      position: absolute
+      top: 140px
+      left: 0
+      right: 0
+      padding: 0 55px
   &__btn
     &--box
       text-align: center
@@ -527,6 +538,11 @@ a:focus
     top: 10px    
     font: 300 80px/80px $roboto
     color: rgba(49, 52, 59, 0.5)
+    overflow: hidden
+    &--n
+      position: relative
+      left: -20px
+      display: block
   &__arrow
     display: inline-block
     position: absolute  
@@ -571,20 +587,20 @@ a:focus
         right: 0  
       &-prev,
       &-next
-        top: 200px
+        top: 240px
         z-index: 25
         font-size: 0
         line-height: 0
         height: 60px
         width: 60px
-        background-color: rgba(0,0,0,0.5)
+        background-color: rgba(0,0,0,0.7)
         &:hover
-          background-color: rgba(0,0,0,0.8)
+          background-color: rgba(0,0,0,0.9)
         &:before
           content: ''
           font-size: 0
         .fa
-          font-size: 60px
+          font-size: 40px
           color: #fff
 .slider
   &__item
@@ -641,6 +657,8 @@ a:focus
     width: 100%
     top: 0
     left: 0
+  &__container
+    position: relative  
   &__form
     margin: 140px 0
     background-color: #fff
@@ -655,7 +673,7 @@ a:focus
     border: 2px solid rgba(200, 200, 200, 0.8)
     color: #000
     +placeholder
-      color: #000
+      color: rgba(49, 52, 59, 1)
     &:hover
       border-color: rgba(49, 52, 59, 0.97)
   &__btn
@@ -663,7 +681,7 @@ a:focus
 +comment("footer style") 
 .footer
   padding: 30px 0
-  background-color: rgba(49, 52, 59, 1)
+  background-color: #31343b
   &__text
     font: 400 13px/24px $roboto
     color: rgb(130,130,130)
@@ -671,15 +689,21 @@ a:focus
       color: #fff
 .scroll    
   display: inline-block
-  border: 2px solid rgba(200, 200, 200, 0.8)  
+  border: 2px solid
+  border-color: rgba(130,130,130,0.8)
   +br(50%)
   height: 50px
   width: 50px
   line-height: 45px
   text-align: center
-  color: rgba(200, 200, 200, 0.8)
+  +transition(all .3s ease-out)
+  .fa
+    color: rgba(130,130,130,0.8)
   &:hover,
-  &:active,
-  &:focus,
-  &:visited
-    color: rgba(200, 200, 200, 0.8)
+  &:active
+    transform: translate(0, -15px)
+    +transition(all .3s ease-out)
+    border-color: rgba(200,200,200,0.8)
+    .fa
+      color: rgba(200,200,200,0.8)
+    

@@ -134,15 +134,15 @@
 }
 
 .fancybox-prev span {
-	background: rgba(0, 0, 0, 0.5) url(../img/prev.png) no-repeat center center;
+	background: rgba(0, 0, 0, 0.7) url(../img/prev.png) no-repeat center center;
 }
 
 .fancybox-next span {
-	background: rgba(0, 0, 0, 0.5) url(../img/next.png) no-repeat center center;
+	background: rgba(0, 0, 0, 0.7) url(../img/next.png) no-repeat center center;
 }
 
 .fancybox-nav:hover span {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 .fancybox-tmp {

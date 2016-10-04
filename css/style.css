@@ -878,6 +878,7 @@ a:focus {
 .content__btn {
   color: rgba(49, 52, 59, 0.9);
   background-color: #fdad00;
+  text-transform: uppercase;
   -webkit-box-shadow: 0px 10px 20px rgba(223, 114, 21, 0.2);
   -moz-box-shadow: 0px 10px 20px rgba(223, 114, 21, 0.2);
   -ms-box-shadow: 0px 10px 20px rgba(223, 114, 21, 0.2);
@@ -933,7 +934,7 @@ a:focus {
   padding: 15px 0 25px;
   position: relative;
   z-index: 20;
-  height: 150px;
+  height: 155px;
   background-color: rgba(255, 197, 0, 0.8);
 }
 .contact__box {
@@ -945,7 +946,6 @@ a:focus {
   transition: all 0.3s ease-out;
 }
 .contact__box .ic {
-  margin-bottom: 10px;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -953,7 +953,15 @@ a:focus {
   transition: all 0.3s ease-out;
 }
 .contact__box:hover .ic {
-  transform: translate(0, -10px);
+  transform: translate(0, -15px);
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.contact__box:hover .contact__text {
+  transform: translate(0, 5px);
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -961,13 +969,21 @@ a:focus {
   transition: all 0.3s ease-out;
 }
 .contact__box:hover .contact__name {
-  display: block;
+  visibility: visible;
   opacity: 1;
-  -moz-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out;
-  -ms-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.contact__text {
+  transform: translate(0, -15px);
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .contact__info {
   margin-bottom: 0;
@@ -976,7 +992,7 @@ a:focus {
   text-align: center;
 }
 .contact__name {
-  display: none;
+  visibility: hidden;
   opacity: 0;
   font: 400 16px/16px "Roboto", sans-serif;
   color: #333;
@@ -1012,6 +1028,7 @@ a:focus {
   transition: all 0.3s ease-out;
 }
 .price__img:hover {
+  cursor: pointer;
   transform: translate(0, -10px);
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -1161,7 +1178,7 @@ a:focus {
   display: inline-block;
   opacity: 1;
   visibility: visible;
-  transform: translate(0, -20px);
+  transform: translate(0, -10px);
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -1171,7 +1188,7 @@ a:focus {
 .advantage__box:hover .advantage__text--hover {
   opacity: 1;
   visibility: visible;
-  transform: translate(0, 20px);
+  top: 160px;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -1202,14 +1219,17 @@ a:focus {
   visibility: visible;
   margin-bottom: -60px;
   position: relative;
-  top: 50px;
+  top: 40px;
 }
 .advantage__text--hover {
   font: 400 16px/20px "Roboto", sans-serif;
   opacity: 0;
   visibility: hidden;
-  margin: 0;
-  position: static;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  right: 0;
+  padding: 0 55px;
 }
 .advantage__btn--box {
   text-align: center;
@@ -1401,6 +1421,12 @@ a:focus {
   top: 10px;
   font: 300 80px/80px "Roboto", sans-serif;
   color: rgba(49, 52, 59, 0.5);
+  overflow: hidden;
+}
+.scheme__number--n {
+  position: relative;
+  left: -20px;
+  display: block;
 }
 .scheme__arrow {
   display: inline-block;
@@ -1470,23 +1496,23 @@ a:focus {
   right: 0;
 }
 .make__slider .slick-prev, .make__slider .slick-next {
-  top: 200px;
+  top: 240px;
   z-index: 25;
   font-size: 0;
   line-height: 0;
   height: 60px;
   width: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .make__slider .slick-prev:hover, .make__slider .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .make__slider .slick-prev:before, .make__slider .slick-next:before {
   content: "";
   font-size: 0;
 }
 .make__slider .slick-prev .fa, .make__slider .slick-next .fa {
-  font-size: 60px;
+  font-size: 40px;
   color: #fff;
 }
 
@@ -1599,6 +1625,9 @@ a:focus {
   top: 0;
   left: 0;
 }
+.map__container {
+  position: relative;
+}
 .map__form {
   margin: 140px 0;
   background-color: #fff;
@@ -1617,19 +1646,19 @@ a:focus {
   color: #000;
 }
 .map__input:-ms-input-placeholder {
-  color: #000;
+  color: #31343b;
 }
 .map__input:-moz-placeholder {
-  color: #000;
+  color: #31343b;
 }
 .map__input::-moz-placeholder {
-  color: #000;
+  color: #31343b;
 }
 .map__input::-webkit-input-placeholder {
-  color: #000;
+  color: #31343b;
 }
 .map__input::placeholder {
-  color: #000;
+  color: #31343b;
 }
 .map__input:hover {
   border-color: rgba(49, 52, 59, 0.97);
@@ -1655,7 +1684,8 @@ a:focus {
 
 .scroll {
   display: inline-block;
-  border: 2px solid rgba(200, 200, 200, 0.8);
+  border: 2px solid;
+  border-color: rgba(130, 130, 130, 0.8);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1664,8 +1694,24 @@ a:focus {
   width: 50px;
   line-height: 45px;
   text-align: center;
-  color: rgba(200, 200, 200, 0.8);
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
-.scroll:hover, .scroll:active, .scroll:focus, .scroll:visited {
+.scroll .fa {
+  color: rgba(130, 130, 130, 0.8);
+}
+.scroll:hover, .scroll:active {
+  transform: translate(0, -15px);
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border-color: rgba(200, 200, 200, 0.8);
+}
+.scroll:hover .fa, .scroll:active .fa {
   color: rgba(200, 200, 200, 0.8);
 }
