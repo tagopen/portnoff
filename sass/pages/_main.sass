@@ -74,7 +74,10 @@
     +svgb(#{$ic}, 72, 72) 
 @each $ic in eye2
   .ic-#{$ic}
-    +svgb(#{$ic}, 36, 26)       
+    +svgb(#{$ic}, 36, 26) 
+@each $ic in search
+  .ic-#{$ic}
+    +svgb(#{$ic}, 36, 36)       
 .text-danger
   color: #e74c3c
   text-align: left
@@ -444,17 +447,19 @@ a:focus
     color: #31343B 
     margin-bottom: 50px 
 .mosaicflow
-  &__link
-    position: relative
-    z-index: 15
   &__item
     position: relative
     height: 220px
     margin-top: 7.5px
     margin-bottom: 7.5px
-    +cover()
+    overflow: hidden
     &--doubleheight
       height: 455px
+  &__img
+    display: block
+    height: 100%
+    +cover()
+    +transition(all .4s ease-out)
     &--1
       background-image: url("../img/work1.jpg")
     &--2
@@ -471,28 +476,24 @@ a:focus
       background-image: url("../img/work7.jpg")
     &--8
       background-image: url("../img/work8.jpg")
-    &:hover
-      background-size: 120%
-      +transition(all 5s ease-out)
-      .mosaicflow__hover
-        visibility: visible
-        opacity: 1  
-        +transition(all .15s ease-out)
   &__hover
-    z-index: 10 
-    position: absolute  
-    height: 100%
-    width: 100%
-    top: 0
-    left: 0
+    position: absolute
+    display: block
+    +coverdiv
     background-color: rgba(255, 197, 0, 0.8)
     visibility: hidden
     opacity: 0
-    +transition(all .15s ease-out)
+    +transition(all .4s ease-out)
   &__link
-    display: block
-    width: 100%
-    height: 100%  
+    &:hover
+      .mosaicflow__hover
+        visibility: visible
+        opacity: 1
+      .mosaicflow__img
+        +transform(scale(1.2))
+  &__icon
+    +ica
+
 .fancybox   
   &-skin 
     padding: 0 !important       
